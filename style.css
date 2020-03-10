@@ -1,0 +1,26 @@
+#frame {
+  border-radius: 5px;
+  background-color: white;
+  border: 2px solid black;
+  height: 350px;
+  width: 400px;
+}
+.buttons1 {
+  background-color: blue;
+  color: white;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+}
+.buttons2 {
+  background-color: turquoise;
+  color: white;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+}
+#font1 {
+  text-align: center;
+  font-size: large;
+  color: black;
+}
