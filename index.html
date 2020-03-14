@@ -6,23 +6,128 @@
     <title>Quiz Timer</title>
   </head>
   <body>
-    <div id="frame">
-        <div id="font">
-            <h2>True or False Quiz</h2>
-            <text>Question: <text id="number1">0</text></text><br />
-            <text>Score: <text id="score1">0</text></text>
-            <hr /> 
-            <div id="disappear1">
-                <button class="buttons2" onclick="begin1()">Begin</button>
-            </div>
-         </div>          
-        </div>
-        <div>
-        <p id="message1"></p>
-        <p id="message2"></p>
-        <p id="message3"></p>
-        <p id="message4"></p>
-    </div>
-    </biv>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <h2>Quiz Time</h2>
+    <div id="quiz"></div>
+    <button id="start quiz">
+      START QUIZ:<text> TIME: <text id="timer"> 10 seconds</text></text>
+    </button>
+
+    <br />
+    <br />
+    <form action="/action_page.php">
+      <label for="quiz">IS JASON DAY A PRO GOLFER?</label>
+      <div class="settings"></div>
+      <label>true</label>
+      <input
+        type="checkbox"
+        id="1"
+        value="true"
+        onclick="selectOnlyThis(this.id)"
+      />
+
+      <br />
+      <label>false</label>
+      <input
+        type="checkbox"
+        id="2"
+        value="false"
+        onclick="selectOnlyThis(this.id)"
+      />
+      <br />
+      <label>dont know</label>
+      <input
+        type="checkbox"
+        id="3"
+        value="dont know"
+        onclick="selectOnlyThis(this.id)"
+      />
+      <br />
+      <br />
+      <button id="answer">answer</button>
+    </form>
+    <br />
+    <form action="/action_page.php">
+      <label for="quiz">IS A NISSAN SILVIA USED AS A DRIFT CAR IN JAPAN?</label>
+      <br />
+      <div class="settings"></div>
+      <label>true</label>
+      <input
+        type="checkbox"
+        id="1"
+        value="true"
+        onclick="selectOnlyThis(this.id)"
+      />
+      <br />
+      <label>false</label>
+      <input
+        type="checkbox"
+        id="2"
+        value="false"
+        onclick="selectOnlyThis(this.id)"
+      />
+      <br />
+      <label>dont know</label>
+      <input
+        type="checkbox"
+        id="3"
+        value="dont know"
+        onclick="selectOnlyThis(this.id)"
+      />
+      <br />
+      <br />
+      <button id="answer">answer</button>
+    </form>
+    <br />
+    <br />
+    <form action="/action_page.php">
+      <label for="quiz">TOOTHPASTE IS A FOOD?</label>
+      <br />
+      <div class="settings"></div>
+      <label>true</label>
+      <input
+        type="checkbox"
+        id="1"
+        value="true"
+        onclick="selectOnlyThis(this.id)"
+      />
+
+      <br />
+      <label>false</label>
+      <input
+        type="checkbox"
+        id="2"
+        value="false"
+        onclick="selectOnlyThis(this.id)"
+      />
+      <br />
+      <label>dont know</label>
+      <input
+        type="checkbox"
+        id="3"
+        value="dont know"
+        onclick="selectOnlyThis(this.id)"
+      />
+      <br />
+      <br />
+      <button id="answer">answer</button>
+    </form>
+    <form action="/action_page.php">
+      <br />
+      <div id="results"></div>
+    </form>
+    <form
+      name="myForm"
+      action="/action_page.php"
+      onsubmit="return validationForm()"
+      method="post"
+    >
+      <input type="text" name="Fname" />
+      <input type="submit" value="submit" />
+    </form>
+    <script src="javascript.js">
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+    </script>
   </body>
 </html>
