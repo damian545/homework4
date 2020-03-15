@@ -150,8 +150,6 @@ const answerContainer = answerContainers[questionNumber];
 const selector = `input[name=question${questionNumber}]:checked`;
 const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
-// show number of correct answers out of total
-resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 // a countdown timer at the beginning of the quiz
 var Timer = 10;
 var checkTimer = false;
