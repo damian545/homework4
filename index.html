@@ -6,8 +6,7 @@
     <title>Quiz Timer</title>
   </head>
   <body>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
+    <script src="javascript.js"></script>
     <h2>Quiz Time</h2>
     <div id="quiz"></div>
     <button id="start quiz">
@@ -16,118 +15,102 @@
 
     <br />
     <br />
-    <form action="/action_page.php">
+    <form>
       <label for="quiz">IS JASON DAY A PRO GOLFER?</label>
-      <div class="settings"></div>
-      <label>true</label>
-      <input
-        type="checkbox"
-        id="1"
-        value="true"
-        onclick="selectOnlyThis(this.id)"
-      />
+      <div class="settings">
+        <label>true</label>
+        <input type="checkbox" ></input> 
+          
+       
 
-      <br />
-      <label>false</label>
-      <input
-        type="checkbox"
-        id="2"
-        value="false"
-        onclick="selectOnlyThis(this.id)"
-      />
-      <br />
-      <label>dont know</label>
-      <input
-        type="checkbox"
-        id="3"
-        value="dont know"
-        onclick="selectOnlyThis(this.id)"
-      />
+        <br />
+        <label>false</label>
+        <input
+          type="checkbox"
+          
+        ></input>
+        <br />
+        <label>dont know</label>
+        <input
+          type="checkbox"
+          
+        ></input>
+      </div>
       <br />
       <br />
       <button id="answer">answer</button>
     </form>
     <br />
-    <form action="/action_page.php">
+    <form>
       <label for="quiz">IS A NISSAN SILVIA USED AS A DRIFT CAR IN JAPAN?</label>
       <br />
-      <div class="settings"></div>
-      <label>true</label>
-      <input
-        type="checkbox"
-        id="1"
-        value="true"
-        onclick="selectOnlyThis(this.id)"
-      />
-      <br />
-      <label>false</label>
-      <input
-        type="checkbox"
-        id="2"
-        value="false"
-        onclick="selectOnlyThis(this.id)"
-      />
-      <br />
-      <label>dont know</label>
-      <input
-        type="checkbox"
-        id="3"
-        value="dont know"
-        onclick="selectOnlyThis(this.id)"
-      />
+      <div class="settings">
+        <label>true</label>
+        <input
+          type="checkbox"
+          
+        ></input>
+        <br />
+        <label>false</label>
+        <input
+          type="checkbox"
+         
+        ></input>
+        <br />
+        <label>dont know</label>
+        <input
+          type="checkbox"
+          
+        ></input>
+      </div>
       <br />
       <br />
       <button id="answer">answer</button>
     </form>
     <br />
     <br />
-    <form action="/action_page.php">
+    <form>
       <label for="quiz">TOOTHPASTE IS A FOOD?</label>
       <br />
-      <div class="settings"></div>
-      <label>true</label>
-      <input
-        type="checkbox"
-        id="1"
-        value="true"
-        onclick="selectOnlyThis(this.id)"
-      />
+      <div class="settings">
+        <label>true</label>
+        <input
+          type="checkbox"
+          
+        ></input>
 
-      <br />
-      <label>false</label>
-      <input
-        type="checkbox"
-        id="2"
-        value="false"
-        onclick="selectOnlyThis(this.id)"
-      />
-      <br />
-      <label>dont know</label>
-      <input
-        type="checkbox"
-        id="3"
-        value="dont know"
-        onclick="selectOnlyThis(this.id)"
-      />
+        <br />
+        <label>false</label>
+        <input
+          type="checkbox"
+          
+        ></input>
+        <br />
+        <label>dont know</label>
+        <input
+          type="checkbox"
+         
+        ></input>
+      </div>
       <br />
       <br />
       <button id="answer">answer</button>
     </form>
-    <form action="/action_page.php">
-      <br />
-      <div id="results"></div>
-    </form>
+    <br />
+    <div id="results"></div>
+    <button id="submitButton">submit</button>
+    <br />
+    <br />
+
     <form
       name="myForm"
-      action="/action_page.php"
+      
       onsubmit="return validationForm()"
       method="post"
-    >
+    ></form>
+    <form>
       <input type="text" name="Fname" />
       <input type="submit" value="submit" />
     </form>
-    <script src="javascript.js">
-      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
-    </script>
   </body>
 </html>
