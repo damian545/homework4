@@ -1,167 +1,111 @@
-// an area to put your name at the end of the quiz
-function validateForm() {
-  var x = document.forms["myForm"]["Fname"].value;
-  if (x == "") {
-    alert("name must be filled ot");
-    return false;
-  }
-}
-// variables
-
-var submitButton = addEventListener("click", showResults);
-var quizContainer = document.getElementById("quiz");
-var resultsContainer = document.getElementById("results");
-var submitButton = document.getElementById("submit");
-
-// functions
-function buildQuiz() {}
-
-function showResults() {}
-
-// display quiz right away
-buildQuiz();
-
-// on submit, show results
-submitButton.addEventListener("click", showResults);
-// The questions I want answered..
-const myQuestions = [
-  {
-    question: "Is Jason Day a pro golfer?",
-    answers: {
-      a: "true",
-      b: "false",
-      C: "dont know"
-    },
-    correctAnswer: "a"
-  },
-  {
-    question: "Is a Nissan Silvia a drift car in Japan?",
-    answers: {
-      a: "true",
-      b: "false",
-      c: "dont know"
-    },
-    correctAnswer: "a"
-  },
-  {
-    question: "Toothpaste is a food?",
-    answers: {
-      a: "true",
-      b: "false",
-      c: "dont know"
-    },
-    correctAnswer: "b"
-  }
+var q = [
+  "Is Jason Day a pro golfer?<br /><br />",
+  "Is a Nissan Silvia a drift car in Japan?<br /><br />",
+  "Is toothpaste a food?<br /><br />"
+];
+var a1 = [
+  "<button class=button2 onclick=q1c()>true<button</button>",
+  "<button class=button2 onclick=q2i()>false</button>"
+];
+var a2 = [
+  "<button class=button2 onclick=q1c()>true<button</button>",
+  "<button class=button2 onclick=q2i()>false</button>"
+];
+var a3 = [
+  "<button class=button2 onclick=q1c()>false<button</button>",
+  "<button class=button2 onclick=q2i()>true</button>"
 ];
 
-function buildQuiz() {
-  // variable to store the HTML output
-  const output = [];
+var c = ["true", "true", "true"];
+var i = ["false", "false", "false"];
 
-  // for each question...
-  myQuestions.forEach((currentQuestion, questionNumber) => {
-    // variable to store the list of possible answers
-    const answers = [];
+var n = 0;
+n++;
 
-    // and for each available answer...
-    for (letter in currentQuestion.answers) {
-      // ...add an HTML radio button
-      answers.push(
-        `<label>
-            <input type="radio" name="question${questionNumber}" value="${letter}">
-            ${letter} :
-            ${currentQuestion.answers[letter]}
-          </label>`
-      );
-    }
+var s = 0;
+s++;
 
-    // add this question and its answers to the output
-    output.push(
-      `<div class="question"> ${currentQuestion.question} </div>
-        <div class="answers"> ${answers.join("")} </div>`
-    );
-  });
-
-  // finally combine our output list into one string of HTML and put it on the page
-  quizContainer.innerHTML = output.join("");
+function begin1() {
+  disappear1.innerHTML = "";
+  message1.innerHTML = "";
+  question1.innerHTML = q[0];
+  option1.innerHTML = a1(0);
+  option2.innerHTML = a2(0);
+  option3.innerHTML = a3(0);
+  number1.innerHTML = n++;
 }
-myQuestions.forEach((currentQuestion, questionNumber) => {
-  // the code we want to run for each question goes here
-});
-// I want to store the list of answer choices
-const answers = [];
-
-// and for each available answer...
-for (letter in currentQuestion.answers) {
-  // ...add an html radio button
-  answers.push(
-    `<label>
-      <input type="radio" name="question${questionNumber}" value="${letter}">
-      ${letter} :
-      ${currentQuestion.answers[letter]}
-    </label>`
-  );
+function q1c() {
+  answer1.innerHTML = c(0);
+  option1.innerHTML = "";
+  option2.innerHTML = "";
+  option3.innerHTML = "";
+  next1.innerHTML = "<button class=button1 onclick=new2()>Next</button>";
+  score1.innerHTML = s++;
 }
-
-// add this question and its answers to the output
-output.push(
-  `<div class="question"> ${currentQuestion.question} </div>
-  <div class="answers"> ${answers.join("")} </div>`
-);
-quizContainer.innerHTML = output.join("");
-
-function showResults() {
-  // gather answer containers from our quiz
-  const answerContainers = quizContainer.querySelectorAll(".answers");
-
-  // keep track of user's answers
-  let numCorrect = 0;
-
-  // for each question...
-  myQuestions.forEach((currentQuestion, questionNumber) => {
-    // find selected answer
-    const answerContainer = answerContainers[questionNumber];
-    const selector = `input[name=question${questionNumber}]:checked`;
-    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-
-    // if answer is correct
-    if (userAnswer === currentQuestion.correctAnswer) {
-      // add to the number of correct answers
-      numCorrect++;
-
-      // color the answers green
-      answerContainers[questionNumber].style.color = "lightgreen";
-    }
-    // if answer is wrong or blank
-    else {
-      // color the answers red
-      answerContainers[questionNumber].style.color = "red";
-    }
-  });
-
-  // show number of correct answers out of total
-  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+function q2c() {
+  answer1.innerHTML = c(0);
+  option1.innerHTML = "";
+  option2.innerHTML = "";
+  option3.innerHTML = "";
+  next1.innerHTML = "<button class=button1 onclick=new2()>Next</button>";
+  score1.innerHTML = s++;
 }
-// gather answer containers from our quiz
-const answerContainers = quizContainer.querySelectorAll(".answers");
-
-// find selected answer
-const answerContainer = answerContainers[questionNumber];
-const selector = `input[name=question${questionNumber}]:checked`;
-const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-
-// a countdown timer at the beginning of the quiz
-var Timer = 10;
-var checkTimer = false;
-var t;
-function countDown() {
-  document.getElementById("txt").value = Timer--;
-  +setInterval(countDown, 1000);
+function q1i() {
+  answer1.innerHTML = i(0);
+  option1.innerHTML = "";
+  option2.innerHTML = "";
+  option3.innerHTML = "";
+  next1.innerHTML = "<button class=button1 onclick=new2()>Next</button>";
+  score1.innerHTML = s++;
 }
-function startTimer() {
-  if (!checkTimer) {
-    checkTimer = true;
-  } else {
-    console.log("Error!");
+function new2() {
+  message1.innerHTML = "";
+  question1.innerHTML = q[1];
+  option1.innerHTML = a1(1);
+  option2.innerHTML = a2(1);
+  option3.innerHTML = a3(1);
+  next1.innerHTML = "";
+  answer1.innerHTML = "";
+  number1.innerHTML = n++;
+}
+function q2i() {
+  answer1.innerHTML = i(1);
+  option1.innerHTML = "";
+  option2.innerHTML = "";
+  option3.innerHTML = "";
+  next1.innerHTML = "<button class=button1 onclick=new3()>Next</button>";
+  score1.innerHTML = s++;
+}
+function q2c() {
+  answer1.innerHTML = c(1);
+  option1.innerHTML = "";
+  option2.innerHTML = "";
+  option3.innerHTML = "";
+  next1.innerHTML = "<button class=button1 onclick=new3()>Next</button>";
+  score1.innerHTML = s++;
+}
+function new3() {
+  message1.innerHTML = "End of quiz";
+  question1.innerHTML = "";
+  option1.innerHTML = "";
+  option2.innerHTML = "";
+  option3.innerHTML = "";
+  next1.innerHTML =
+    "<div id=text1>" + "<button class=button1 onclick=repeat1()</button>";
+  answer1.innerHTML = "";
+}
+function timer() {
+  c = c - 1;
+  if (c < 10) {
+    timer.innerHTML = c;
   }
+  if (c < -1) {
+    window.clearInterval(update);
+  }
+}
+
+update = setInterval("timer()", 1000);
+
+function repeat() {
+  location.reload();
 }
